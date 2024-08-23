@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Liste des professeurs{% endblock %}
+
+{% block utilisateur_active %}active{% endblock %}
+
+{% block content %}
+
+    <div class="content">
+        <div class="back-button" style="justify-content: flex-end;" >
+            <a href="{% url 'utilisateur:index' %}"><i class="fas fa-arrow-left"></i> Retour</a>
+        </div>
+
+        <div class="form-container">
+            <h1>Modifier d'un utilisateur</h1>
+
+            <div class="form-group">
+                <label for="nom">Pseudo</label>
+                <input type="text" id="nom" name="nom">
+            </div>
+
+            <div class="form-group">
+                <label for="prenom">Mot de passe</label>
+                <input type="text" id="prenom" name="prenom">
+            </div>
+
+            <div class="form-group">
+                <label for="matricule">Confirmez le mot de passe</label>
+                <input type="text" id="matricule" name="matricule">
+            </div>
+
+            <div class="form-actions">
+                <button class="btn-cancel" onclick="confirmCancel()">Annuler</button>
+                <button class="btn-save">Enregistrer</button>
+            </div>
+        </div>
+    </div>
+{% endblock %}
